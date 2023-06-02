@@ -1,0 +1,78 @@
+{
+  "name": "cs-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3001 & local-ssl-proxy --source 3000 --target 3001",
+    "dev-https": "local-ssl-proxy --key ./.keys/local.key --cert ./.keys/local.crt --source 3001 --target 3000",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/cache": "^11.10.5",
+    "@emotion/css": "^11.10.6",
+    "@emotion/react": "^11.10.6",
+    "@emotion/server": "^11.10.0",
+    "@emotion/styled": "^11.10.6",
+    "@mui/icons-material": "^5.11.11",
+    "@mui/material": "^5.11.13",
+    "@mui/styles": "^5.11.13",
+    "@types/node": "18.15.3",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "18.0.11",
+    "cors": "^2.8.5",
+    "eslint": "^8.36.0",
+    "eslint-config-next": "^13.2.4",
+    "http-proxy-middleware": "^2.0.6",
+    "i18next": "^22.4.11",
+    "luxon": "^3.3.0",
+    "next": "13.2.4",
+    "next-i18next": "^13.2.2",
+    "nextjs-cors": "^2.1.2",
+    "query-string": "^8.1.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-i18next": "^12.2.0",
+    "react-icons": "^4.8.0",
+    "react-lazy-load-image-component": "^1.5.6",
+    "simplebar": "^6.2.4",
+    "simplebar-react": "^3.2.1",
+    "swiper": "^9.2.0",
+    "swr": "^2.1.0",
+    "typescript": "5.0.2"
+  },
+  "devDependencies": {
+    "@emotion/babel-plugin": "^11.10.6",
+    "@tailwindcss/line-clamp": "^0.4.2",
+    "@types/cors": "^2.8.13",
+    "@types/luxon": "^3.2.0",
+    "@typescript-eslint/eslint-plugin": "^5.55.0",
+    "@typescript-eslint/parser": "^5.55.0",
+    "babel-plugin-direct-import": "^1.0.0",
+    "babel-plugin-macros": "^3.1.0",
+    "babel-plugin-twin": "^1.1.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "lint-staged": "^13.2.0",
+    "local-ssl-proxy": "^2.0.5",
+    "prettier": "^2.8.4",
+    "tailwindcss": "^3.2.7",
+    "twin.macro": "^3.1.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "eslint --cache --fix",
+    "*.{js,css,md}": "prettier --write"
+  },
+  "babelMacros": {
+    "twin": {
+      "preset": "emotion"
+    }
+  }
+}

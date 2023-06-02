@@ -1,0 +1,7 @@
+{
+  "menu": "Menu",
+  "open": "Open",
+  "close": "Close",
+  "search": "Search...",
+  "no city found": "No results found for: \"{{ query }}\""
+}
